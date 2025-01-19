@@ -27,13 +27,6 @@
   },
   "packageRules": [
     {
-      "description": "Disable all release-1.x PRs",
-      "matchBaseBranches": [
-        "/^release-1\\..*/"
-      ],  
-      "enabled": false
-    },
-    {
       "enabled": true,      
       "description": "enable dockerfile updates on all branches",
       "matchDatasources": [
