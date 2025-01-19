@@ -34,6 +34,16 @@
 			"enabled": false
 		},
     {
+      "description": "disable all renovate PRs on release branches except for dockerfile updates",
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchBaseBranches": [
+        "/^release-1\\..*/"
+      ],   
+			"enabled": true
+		},
+    {
       "matchCategories": [
         "python"
       ],
@@ -281,7 +291,7 @@
     },
     {
       "extends": [
-        "group:opentelemetry-jsMonorepo"
+        "monorepo:opentelemetry-js"
       ],
       "matchUpdateTypes": [
         "patch",
@@ -292,7 +302,7 @@
     },
     {
       "extends": [
-        "group:opentelemetry-jsMonorepo"
+        "monorepo:opentelemetry-js"
       ],
       "matchUpdateTypes": [
         "major"
