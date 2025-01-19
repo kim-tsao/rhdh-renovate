@@ -27,23 +27,23 @@
   },
   "packageRules": [
     {
-      "description": "disable all renovate PRs on release branches except for dockerfile updates",
-      "matchBaseBranches": [
-        "/^release-1\\..*/"
-      ],   
-			"enabled": false
-		},   
+      "description": "Disable everything before selectively enabling",
+      "matchPackageNames": ["*"],
+      "enabled": false
+    },
     {
+      "enabled": true,      
       "description": "enable dockerfile updates on release branches",
       "matchDatasources": [
         "docker"
       ],
       "matchBaseBranches": [
+        "main",
         "/^release-1\\..*/"
-      ],   
-			"enabled": true
+      ]  
 		},     
     {
+      "enabled": false,
       "matchCategories": [
         "python"
       ],
@@ -53,6 +53,7 @@
       "description": "require dashboard approval for all python dependencies due to potential conflicts"
     },
     {
+      "enabled": true,    
       "matchCategories": [
         "docker"
       ],
@@ -61,6 +62,7 @@
       }
     },
     {
+      "enabled": true,    
       "matchDatasources": [
         "docker"
       ],
@@ -69,30 +71,15 @@
         "patch"
       ],    
       "matchBaseBranches": [
-        "main"
+        "main",
+        "/^release-1\\..*/"
       ],      
       "additionalBranchPrefix": "dockerfile ",        
       "groupName": "All dockerfile non-major image updates",
       "automerge": false
     },  
     {
-      "description": "enable PRs for dockerfile image updates on release branches",
-      "enabled":true, 
-      "matchDatasources": [
-        "docker"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],    
-      "matchBaseBranches": [
-        "/^release-1\\..*/"
-      ],      
-      "additionalBranchPrefix": "dockerfile ",        
-      "groupName": "All dockerfile non-major image updates",
-      "automerge": false
-    },      
-    {
+      "enabled": true,   
       "matchDatasources": [
         "docker"
       ],
@@ -102,43 +89,59 @@
       ],     
       "matchFileNames": [
         ".ibm/images/Dockerfile"
+      ],  
+      "matchBaseBranches": [
+        "main"
       ],     
       "additionalBranchPrefix": "test-dockerfile ",        
       "groupName": "All Test dockerfile patch image updates",
       "automerge": false
     },      
     {
+      "enabled": true,   
       "matchDepTypes": [
         "devDependencies"
       ],
       "matchUpdateTypes": [
         "patch"
       ],
+      "matchBaseBranches": [
+        "main"
+      ], 
       "matchCurrentVersion": "!/^0/",
       "groupName": "DevDependencies (patch)",
       "automerge": true
     },
     {
+      "enabled": true,   
       "matchDepTypes": [
         "devDependencies"
       ],
       "matchUpdateTypes": [
         "minor"
       ],
+      "matchBaseBranches": [
+        "main"
+      ], 
       "matchCurrentVersion": "!/^0/",
       "groupName": "DevDependencies (minor)",
       "automerge": true
     },    
     {
+      "enabled": true,   
       "matchDepTypes": [
         "devDependencies"
       ],
       "matchUpdateTypes": [
         "major"
       ],
+      "matchBaseBranches": [
+        "main"
+      ], 
       "groupName": "DevDependencies "
     },
     {
+      "enabled": true,   
       "matchDepTypes": [
         "dependencies",
         "peerDependencies"
@@ -146,9 +149,13 @@
       "groupName": "Dependencies (minor)",
       "matchUpdateTypes": [
         "minor"
+      ],
+      "matchBaseBranches": [
+        "main"
       ]
     },
     {
+      "enabled": true,   
       "matchDepTypes": [
         "dependencies",
         "peerDependencies"
@@ -156,9 +163,13 @@
       "groupName": "Dependencies (patch)",
       "matchUpdateTypes": [
         "patch"
+      ],
+      "matchBaseBranches": [
+        "main"
       ]
     },
     {
+      "enabled": true,   
       "matchDepTypes": [
         "dependencies",
         "peerDependencies"
@@ -166,30 +177,42 @@
       "groupName": "Dependencies",
       "matchUpdateTypes": [
         "major"
+      ],
+      "matchBaseBranches": [
+        "main"
       ]
     },
     {
+      "enabled": true,   
       "extends": [
         "packages:test"
       ],
       "matchUpdateTypes": [
         "patch",
         "minor"
+      ],
+      "matchBaseBranches": [
+        "main"
       ],
       "matchCurrentVersion": "!/^0/",
       "groupName": "Test packages (non-major)",
       "automerge": true
     },
     {
+      "enabled": true,   
       "extends": [
         "packages:test"
       ],
       "matchUpdateTypes": [
         "major"
       ],
+      "matchBaseBranches": [
+        "main"
+      ],
       "groupName": "Test packages "
     },
     {
+      "enabled": true,   
       "extends": [
         "packages:linters"
       ],
@@ -198,59 +221,83 @@
         "minor"
       ],
       "matchCurrentVersion": "!/^0/",
+      "matchBaseBranches": [
+        "main"
+      ],
       "groupName": "linters  (non-major)",
       "automerge": true
     },
     {
+      "enabled": true,   
       "extends": [
         "packages:linters"
       ],
       "matchUpdateTypes": [
         "major"
       ],
+      "matchBaseBranches": [
+        "main"
+      ],
       "groupName": "linters"
     },
     {
+      "enabled": true,   
       "extends": [
         "monorepo:material-ui"
       ],
       "matchUpdateTypes": [
         "patch",
         "minor"
+      ],
+      "matchBaseBranches": [
+        "main"
       ],
       "groupName": "material-ui (non-major)",
       "automerge": true
     },
     {
+      "enabled": true,  
       "extends": [
         "monorepo:material-ui"
       ],
       "matchUpdateTypes": [
         "major"
       ],
+      "matchBaseBranches": [
+        "main"
+      ],
       "groupName": "material-ui"
     },
     {
+      "enabled": true,  
       "extends": [
         "monorepo:react"
       ],
       "matchUpdateTypes": [
         "patch",
         "minor"
+      ],
+      "matchBaseBranches": [
+        "main"
       ],
       "groupName": "react (non-major)",
       "automerge": true
     },
     {
+      "enabled": true,  
       "extends": [
         "monorepo:react"
       ],
       "matchUpdateTypes": [
         "major"
       ],
+      "matchBaseBranches": [
+        "main"
+      ],
       "groupName": "react"
     },
     {
+      "enabled": true,  
       "extends": [
         "monorepo:emotion"
       ],
@@ -258,22 +305,33 @@
         "patch",
         "minor"
       ],
+      "matchBaseBranches": [
+        "main"
+      ],
       "groupName": "emotion (non-major)",
       "automerge": true
     },
     {
+      "enabled": true,  
       "extends": [
         "monorepo:emotion"
       ],
       "matchUpdateTypes": [
         "major"
       ],
+      "matchBaseBranches": [
+        "main"
+      ],
       "groupName": "emotion"
     },
     {
+      "enabled": true,  
       "matchUpdateTypes": [
         "patch",
         "minor"
+      ],
+      "matchBaseBranches": [
+        "main"
       ],
       "groupName": "types (non-major)",
       "matchPackageNames": [
@@ -281,8 +339,12 @@
       ]
     },
     {
+      "enabled": true, 
       "matchUpdateTypes": [
         "major"
+      ],
+      "matchBaseBranches": [
+        "main"
       ],
       "groupName": "types ",
       "matchPackageNames": [
@@ -290,6 +352,7 @@
       ]
     },
     {
+      "enabled": true, 
       "extends": [
         "monorepo:opentelemetry-js",
         "monorepo:opentelemetry-js-contrib"
@@ -298,16 +361,23 @@
         "patch",
         "minor"
       ],
+      "matchBaseBranches": [
+        "main"
+      ],
       "groupName": "opentelemetry (non-major)",
       "automerge": false      
     },
     {
+      "enabled": true, 
       "extends": [
         "monorepo:opentelemetry-js",
         "monorepo:opentelemetry-js-contrib"
       ],
       "matchUpdateTypes": [
         "major"
+      ],
+      "matchBaseBranches": [
+        "main"
       ],
       "groupName": "opentelemetry",
       "automerge": false      
