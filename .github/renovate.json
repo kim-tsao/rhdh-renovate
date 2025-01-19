@@ -25,18 +25,7 @@
   "major": {
     "dependencyDashboardApproval": true
   },
-  "packageRules": [
-    {
-      "enabled": true,      
-      "description": "enable dockerfile updates on all branches",
-      "matchDatasources": [
-        "docker"
-      ],
-      "matchBaseBranches": [
-        "main",
-        "/^release-1\\..*/"
-      ]  
-		},     
+  "packageRules": [  
     {
       "enabled": false,
       "matchCategories": [
