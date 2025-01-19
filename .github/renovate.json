@@ -57,6 +57,23 @@
         "docker"
       ],
       "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],    
+      "matchBaseBranches": [
+        "main",
+        "/^release-1\\..*/"
+      ],      
+      "additionalBranchPrefix": "dockerfile ",        
+      "groupName": "All dockerfile non-major image updates",
+      "automerge": false
+    },  
+    {
+      "enabled":true, 
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchUpdateTypes": [
         "patch",
         "minor"
       ],    
@@ -68,38 +85,6 @@
       ],     
       "additionalBranchPrefix": "test-dockerfile ",        
       "groupName": "All Test dockerfile patch image updates",
-      "automerge": false
-    },
-    {
-      "enabled":true, 
-      "matchDatasources": [
-        "docker"
-      ],
-      "matchUpdateTypes": [
-        "patch"
-      ],    
-      "matchBaseBranches": [
-        "main",
-        "/^release-1\\..*/"
-      ],      
-      "additionalBranchPrefix": "dockerfile ",        
-      "groupName": "All dockerfile patch image updates",
-      "automerge": false
-    },    
-    {
-      "enabled":true, 
-      "matchDatasources": [
-        "docker"
-      ],
-      "matchUpdateTypes": [
-        "minor"
-      ],    
-      "matchBaseBranches": [
-        "main",
-        "/^release-1\\..*/"
-      ],      
-      "additionalBranchPrefix": "dockerfile ",        
-      "groupName": "All dockerfile minor image updates",
       "automerge": false
     },      
     {
