@@ -51,6 +51,22 @@
       }
     },
     {
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],    
+      "matchBaseBranches": [
+        "main"
+      ],      
+      "additionalBranchPrefix": "dockerfile ",        
+      "groupName": "All dockerfile non-major image updates",
+      "automerge": false
+    },  
+    {
+      "description": "enable PRs for dockerfile image updates on release branches",
       "enabled":true, 
       "matchDatasources": [
         "docker"
@@ -60,25 +76,20 @@
         "patch"
       ],    
       "matchBaseBranches": [
-        "main",
         "/^release-1\\..*/"
       ],      
       "additionalBranchPrefix": "dockerfile ",        
       "groupName": "All dockerfile non-major image updates",
       "automerge": false
-    },  
+    },      
     {
-      "enabled":true, 
       "matchDatasources": [
         "docker"
       ],
       "matchUpdateTypes": [
         "patch",
         "minor"
-      ],    
-      "matchBaseBranches": [
-        "main"
-      ],  
+      ],     
       "matchFileNames": [
         ".ibm/images/Dockerfile"
       ],     
