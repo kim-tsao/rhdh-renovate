@@ -291,7 +291,8 @@
     },
     {
       "extends": [
-        "monorepo:opentelemetry-js"
+        "monorepo:opentelemetry-js",
+        "monorepo:opentelemetry-js-contrib"
       ],
       "matchUpdateTypes": [
         "patch",
@@ -302,7 +303,8 @@
     },
     {
       "extends": [
-        "monorepo:opentelemetry-js"
+        "monorepo:opentelemetry-js",
+        "monorepo:opentelemetry-js-contrib"
       ],
       "matchUpdateTypes": [
         "major"
