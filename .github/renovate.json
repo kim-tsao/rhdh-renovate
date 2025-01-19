@@ -32,7 +32,17 @@
         "/^release-1\\..*/"
       ],   
 			"enabled": false
-		},    
+		},   
+    {
+      "description": "enable dockerfile updates on release branches",
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchBaseBranches": [
+        "/^release-1\\..*/"
+      ],   
+			"enabled": true
+		},     
     {
       "matchCategories": [
         "python"
