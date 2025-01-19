@@ -52,15 +52,40 @@
       }
     },
     {
+      "enabled":true, 
       "matchDatasources": [
         "docker"
       ],
+      "matchUpdateTypes": [
+        "patch"
+      ],    
       "matchBaseBranches": [
         "main",
         "/^release-1\\..*/"
-      ],        
-      "groupName": "Docker base images"
+      ],  
+      "matchFileNames": [
+        ".ibm/images/Dockerfile"
+      ],     
+      "additionalBranchPrefix": "test-dockerfile ",        
+      "groupName": "All Test dockerfile patch image updates",
+      "automerge": false
     },
+    {
+      "enabled":true, 
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],    
+      "matchBaseBranches": [
+        "main",
+        "/^release-1\\..*/"
+      ],      
+      "additionalBranchPrefix": "dockerfile ",        
+      "groupName": "All dockerfile patch image updates",
+      "automerge": false
+    },    
     {
       "matchDepTypes": [
         "devDependencies"
