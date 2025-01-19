@@ -107,13 +107,23 @@
         "devDependencies"
       ],
       "matchUpdateTypes": [
-        "patch",
+        "patch"
+      ],
+      "matchCurrentVersion": "!/^0/",
+      "groupName": "DevDependencies (patch)",
+      "automerge": true
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
         "minor"
       ],
       "matchCurrentVersion": "!/^0/",
-      "groupName": "DevDependencies (non-major)",
+      "groupName": "DevDependencies (minor)",
       "automerge": true
-    },
+    },    
     {
       "matchDepTypes": [
         "devDependencies"
