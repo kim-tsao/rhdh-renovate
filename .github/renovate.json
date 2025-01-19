@@ -25,7 +25,6 @@
   "major": {
     "dependencyDashboardApproval": true
   },
-  "recreateWhen": "never",
   "packageRules": [
     {
       "description": "disable all renovate PRs on release branches except for dockerfile updates",
