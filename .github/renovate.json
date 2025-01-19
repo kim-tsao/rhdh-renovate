@@ -27,13 +27,15 @@
   },
   "packageRules": [
     {
-      "description": "Disable everything before selectively enabling",
-      "matchPackageNames": ["*"],
+      "description": "Disable all release-1.x PRs",
+      "matchBaseBranches": [
+        "/^release-1\\..*/"
+      ],  
       "enabled": false
     },
     {
       "enabled": true,      
-      "description": "enable dockerfile updates on release branches",
+      "description": "enable dockerfile updates on all branches",
       "matchDatasources": [
         "docker"
       ],
@@ -57,6 +59,10 @@
       "matchCategories": [
         "docker"
       ],
+      "matchBaseBranches": [
+        "main",
+        "/^release-1\\..*/"
+      ], 
       "digest": {
         "enabled": false
       }
