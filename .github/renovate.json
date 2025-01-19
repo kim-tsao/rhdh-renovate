@@ -57,11 +57,11 @@
         "docker"
       ],
       "matchUpdateTypes": [
-        "patch"
+        "patch",
+        "minor"
       ],    
       "matchBaseBranches": [
-        "main",
-        "/^release-1\\..*/"
+        "main"
       ],  
       "matchFileNames": [
         ".ibm/images/Dockerfile"
@@ -86,6 +86,22 @@
       "groupName": "All dockerfile patch image updates",
       "automerge": false
     },    
+    {
+      "enabled":true, 
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchUpdateTypes": [
+        "minor"
+      ],    
+      "matchBaseBranches": [
+        "main",
+        "/^release-1\\..*/"
+      ],      
+      "additionalBranchPrefix": "dockerfile ",        
+      "groupName": "All dockerfile minor image updates",
+      "automerge": false
+    },      
     {
       "matchDepTypes": [
         "devDependencies"
