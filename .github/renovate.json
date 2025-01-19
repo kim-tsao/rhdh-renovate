@@ -138,9 +138,18 @@
         "dependencies",
         "peerDependencies"
       ],
-      "groupName": "Dependencies (non-major)",
+      "groupName": "Dependencies (minor)",
       "matchUpdateTypes": [
-        "minor",
+        "minor"
+      ]
+    },
+    {
+      "matchDepTypes": [
+        "dependencies",
+        "peerDependencies"
+      ],
+      "groupName": "Dependencies (patch)",
+      "matchUpdateTypes": [
         "patch"
       ]
     },
