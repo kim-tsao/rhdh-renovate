@@ -27,6 +27,13 @@
   },
   "packageRules": [
     {
+      "description": "disable all renovate PRs on release branches except for dockerfile updates",
+      "matchBaseBranches": [
+        "/^release-1\\..*/"
+      ],   
+			"enabled": false
+		},    
+    {
       "matchCategories": [
         "python"
       ],
