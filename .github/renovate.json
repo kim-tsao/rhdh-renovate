@@ -280,6 +280,27 @@
       ]
     },
     {
+      "extends": [
+        "group:opentelemetry-jsMonorepo"
+      ],
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "groupName": "opentelemetry (non-major)",
+      "automerge": false      
+    },
+    {
+      "extends": [
+        "group:opentelemetry-jsMonorepo"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "opentelemetry",
+      "automerge": false      
+    },
+    {
       "description": "ignore updates to all backstage updates and 3rd party plugins",
       "groupName": "Backstage packages",
       "dependencyDashboardApproval": true,
