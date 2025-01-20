@@ -10,13 +10,13 @@
   "labels": [
     "kind/dependency upgrade"
   ],
+  "npm": {
+    "minimumReleaseAge": "1 day"
+  },
   "baseBranches":[
     "main",
     "/^release-1\\..*/"
   ],  
-  "npm": {
-    "minimumReleaseAge": "1 day"
-  },
   "pip_requirements": {
     "fileMatch": [
       "requirements.*\\.in"
@@ -25,6 +25,7 @@
   "major": {
     "dependencyDashboardApproval": true
   },
+  "recreateWhen": "never",
   "packageRules": [
     {
       "matchCategories": [
@@ -47,6 +48,10 @@
       "matchDatasources": [
         "docker"
       ],
+      "matchBaseBranches": [
+        "main",
+        "/^release-1\\..*/"
+      ],        
       "groupName": "Docker base images"
     },
     {
