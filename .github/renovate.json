@@ -38,8 +38,9 @@
       "description": "require dashboard approval for all python dependencies due to potential conflicts"
     },
     {
-      "matchManagers": [
-        "dockerfile"
+      "enabled": true,   
+      "matchCategories": [
+        "docker"
       ],
       "matchBaseBranches": [
         "main",
@@ -51,8 +52,9 @@
     },
     {
       "description": "Dockerfile updates on main and release branches",
-      "matchManagers": [
-        "dockerfile"
+      "enabled": true,    
+      "matchDatasources": [
+        "docker"
       ],
       "matchUpdateTypes": [
         "minor",
@@ -68,8 +70,9 @@
     },  
     {
       "description": "test dockerfile updates on main only",
-      "matchManagers": [
-        "dockerfile"
+      "enabled": true,   
+      "matchDatasources": [
+        "docker"
       ],
       "matchUpdateTypes": [
         "patch",
