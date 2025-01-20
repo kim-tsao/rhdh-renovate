@@ -42,10 +42,6 @@
       "matchCategories": [
         "docker"
       ],
-      "matchBaseBranches": [
-        "main",
-        "/^release-1\\..*/"
-      ], 
       "digest": {
         "enabled": false
       }
@@ -59,11 +55,7 @@
       "matchUpdateTypes": [
         "minor",
         "patch"
-      ],    
-      "matchBaseBranches": [
-        "main",
-        "/^release-1\\..*/"
-      ],      
+      ],        
       "additionalBranchPrefix": "dockerfile ",        
       "groupName": "All dockerfile non-major image updates",
       "automerge": false
