@@ -44,8 +44,7 @@
       }
     },
     {
-      "description": "Dockerfile updates on main and release branches",
-      "enabled": true,    
+      "description": "Dockerfile updates on main and release branches", 
       "matchDatasources": [
         "docker"
       ],
@@ -58,8 +57,7 @@
       "automerge": false
     },  
     {
-      "description": "test dockerfile updates on main only",
-      "enabled": true,   
+      "description": "test dockerfile updates on main only", 
       "matchDatasources": [
         "docker"
       ],
