@@ -25,7 +25,6 @@
   "major": {
     "dependencyDashboardApproval": true
   },
-  "separateMinorPatch": true,
   "packageRules": [  
     {
       "enabled": false,
