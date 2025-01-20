@@ -27,6 +27,13 @@
   },
   "packageRules": [  
     {
+      "description": "Enable all release-1.x PRs",
+      "matchBaseBranches": [
+        "/^release-1\\..*/"
+      ],  
+      "enabled": true
+    },
+    {
       "enabled": false,
       "matchCategories": [
         "python"
