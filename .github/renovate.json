@@ -72,9 +72,6 @@
       ],     
       "matchFileNames": [
         ".ibm/images/Dockerfile"
-      ],  
-      "matchBaseBranches": [
-        "main"
       ],     
       "additionalBranchPrefix": "test-dockerfile ",        
       "groupName": "All Test dockerfile patch image updates",
