@@ -10,13 +10,13 @@
   "labels": [
     "kind/dependency upgrade"
   ],
-  "npm": {
-    "minimumReleaseAge": "1 day"
-  },
   "baseBranches":[
     "main",
     "/^release-1\\..*/"
   ],  
+  "npm": {
+    "minimumReleaseAge": "1 day"
+  },
   "pip_requirements": {
     "fileMatch": [
       "requirements.*\\.in"
@@ -25,7 +25,7 @@
   "major": {
     "dependencyDashboardApproval": true
   },
-  "packageRules": [  
+  "packageRules": [
     {
       "matchCategories": [
         "python"
@@ -35,7 +35,7 @@
       "dependencyDashboardApproval": true,
       "description": "require dashboard approval for all python dependencies due to potential conflicts"
     },
-    { 
+    {
       "matchCategories": [
         "docker"
       ],
@@ -44,34 +44,11 @@
       }
     },
     {
-      "description": "Dockerfile updates on main and release branches", 
       "matchDatasources": [
         "docker"
       ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],        
-      "additionalBranchPrefix": "dockerfile ",        
-      "groupName": "All dockerfile non-major image updates",
-      "automerge": false
-    },  
-    {
-      "description": "test dockerfile updates on main only", 
-      "matchDatasources": [
-        "docker"
-      ],
-      "matchUpdateTypes": [
-        "patch",
-        "minor"
-      ],     
-      "matchFileNames": [
-        ".ibm/images/Dockerfile"
-      ],     
-      "additionalBranchPrefix": "test-dockerfile ",        
-      "groupName": "All Test dockerfile patch image updates",
-      "automerge": false
-    },      
+      "groupName": "Docker base images"
+    },
     {
       "matchDepTypes": [
         "devDependencies"
@@ -81,10 +58,10 @@
         "minor"
       ],
       "matchCurrentVersion": "!/^0/",
-      "groupName": "DevDependencies ",
+      "groupName": "DevDependencies (non-major)",
       "automerge": true
-    }, 
-    {   
+    },
+    {
       "matchDepTypes": [
         "devDependencies"
       ],
@@ -98,13 +75,13 @@
         "dependencies",
         "peerDependencies"
       ],
-      "groupName": "Dependencies",
+      "groupName": "Dependencies (non-major)",
       "matchUpdateTypes": [
         "minor",
         "patch"
       ]
     },
-    { 
+    {
       "matchDepTypes": [
         "dependencies",
         "peerDependencies"
@@ -156,7 +133,7 @@
       ],
       "groupName": "linters"
     },
-    {  
+    {
       "extends": [
         "monorepo:material-ui"
       ],
@@ -176,7 +153,7 @@
       ],
       "groupName": "material-ui"
     },
-    { 
+    {
       "extends": [
         "monorepo:react"
       ],
@@ -187,7 +164,7 @@
       "groupName": "react (non-major)",
       "automerge": true
     },
-    { 
+    {
       "extends": [
         "monorepo:react"
       ],
@@ -196,7 +173,7 @@
       ],
       "groupName": "react"
     },
-    {  
+    {
       "extends": [
         "monorepo:emotion"
       ],
@@ -207,7 +184,7 @@
       "groupName": "emotion (non-major)",
       "automerge": true
     },
-    { 
+    {
       "extends": [
         "monorepo:emotion"
       ],
@@ -216,7 +193,7 @@
       ],
       "groupName": "emotion"
     },
-    { 
+    {
       "matchUpdateTypes": [
         "patch",
         "minor"
@@ -234,29 +211,6 @@
       "matchPackageNames": [
         "@types/{/,}**"
       ]
-    },
-    {
-      "extends": [
-        "monorepo:opentelemetry-js",
-        "monorepo:opentelemetry-js-contrib"
-      ],
-      "matchUpdateTypes": [
-        "patch",
-        "minor"
-      ],
-      "groupName": "opentelemetry (non-major)",
-      "automerge": false      
-    },
-    { 
-      "extends": [
-        "monorepo:opentelemetry-js",
-        "monorepo:opentelemetry-js-contrib"
-      ],
-      "matchUpdateTypes": [
-        "major"
-      ],
-      "groupName": "opentelemetry",
-      "automerge": false      
     },
     {
       "description": "ignore updates to all backstage updates and 3rd party plugins",
