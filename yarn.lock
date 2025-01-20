@@ -7808,7 +7808,7 @@ __metadata:
     "@types/supertest": 6.0.2
     express: 4.21.2
     express-promise-router: 4.1.1
-    json-2-csv: 5.5.6
+    json-2-csv: 5.5.7
     knex: 3.1.0
     luxon: 3.5.0
     msw: 1.3.5
@@ -16161,7 +16161,7 @@ __metadata:
     react-dom: 18.3.1
     react-router-dom: 6.26.2
     react-use: 17.5.1
-    tss-react: 4.9.13
+    tss-react: 4.9.14
   languageName: unknown
   linkType: soft
 
@@ -25147,13 +25147,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-2-csv@npm:5.5.6":
-  version: 5.5.6
-  resolution: "json-2-csv@npm:5.5.6"
+"json-2-csv@npm:5.5.7":
+  version: 5.5.7
+  resolution: "json-2-csv@npm:5.5.7"
   dependencies:
     deeks: 3.1.0
     doc-path: 4.1.1
-  checksum: 0be4068b68decc708742ff88c8154deba2e7e03dc84d9c9986a595d5e261ebf8a4b653a07516327f120153a4cfd0902f2cce4e5c84ca57e996a4df27da71bdde
+  checksum: 4d860a4df61538b2d7213b33747603a4c124de0ea0bc2d268662ca8d6893ceff4d981ba1fc93f71f09d31b51f1654f033fe407e7dbe319e0333a92a638e59d53
   languageName: node
   linkType: hard
 
@@ -34206,9 +34206,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tss-react@npm:4.9.13":
-  version: 4.9.13
-  resolution: "tss-react@npm:4.9.13"
+"tss-react@npm:4.9.14":
+  version: 4.9.14
+  resolution: "tss-react@npm:4.9.14"
   dependencies:
     "@emotion/cache": "*"
     "@emotion/serialize": "*"
@@ -34217,13 +34217,14 @@ __metadata:
     "@emotion/react": ^11.4.1
     "@emotion/server": ^11.4.0
     "@mui/material": ^5.0.0 || ^6.0.0
-    react: ^16.8.0 || ^17.0.2 || ^18.0.0
+    "@types/react": ^16.8.0 || ^17.0.2 || ^18.0.0 || ^19.0.0
+    react: ^16.8.0 || ^17.0.2 || ^18.0.0 || ^19.0.0
   peerDependenciesMeta:
     "@emotion/server":
       optional: true
     "@mui/material":
       optional: true
-  checksum: 9327cef392007237020df5d388b4aeabbf7cc06f6d5ac32e2781367244c2de34688922a345878408f45a38890324d67d9a0f7b48cf6b1c968d66d52b3e14e28f
+  checksum: dfab7acd2bb88bde482eba90876b4dd4a8f553a15c2cb9a0dc6203d63f27d3d18bf50d15b11b8ada224035f42fadc6684163e716c052318f1efca8b1589a586e
   languageName: node
   linkType: hard
 
