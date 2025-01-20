@@ -38,7 +38,6 @@
       "description": "require dashboard approval for all python dependencies due to potential conflicts"
     },
     {
-      "enabled": true,    
       "matchCategories": [
         "docker"
       ],
@@ -51,7 +50,7 @@
       }
     },
     {
-      "enabled": true,    
+      "description": "Dockerfile updates on main and release branches",
       "matchDatasources": [
         "docker"
       ],
@@ -68,7 +67,7 @@
       "automerge": false
     },  
     {
-      "enabled": true,   
+      "description": "test dockerfile updates on main only",
       "matchDatasources": [
         "docker"
       ],
@@ -87,35 +86,20 @@
       "automerge": false
     },      
     {
-      "enabled": true,   
       "matchDepTypes": [
         "devDependencies"
       ],
       "matchUpdateTypes": [
-        "patch"
-      ],
-      "matchBaseBranches": [
-        "main"
-      ], 
-      "matchCurrentVersion": "!/^0/",
-      "groupName": "DevDependencies (patch)",
-      "automerge": true
-    },
-    {
-      "enabled": true,   
-      "matchDepTypes": [
-        "devDependencies"
-      ],
-      "matchUpdateTypes": [
+        "patch",
         "minor"
       ],
       "matchBaseBranches": [
         "main"
       ], 
       "matchCurrentVersion": "!/^0/",
-      "groupName": "DevDependencies (minor)",
+      "groupName": "DevDependencies ",
       "automerge": true
-    },    
+    }, 
     {
       "enabled": true,   
       "matchDepTypes": [
@@ -135,30 +119,16 @@
         "dependencies",
         "peerDependencies"
       ],
-      "groupName": "Dependencies (minor)",
+      "groupName": "Dependencies",
       "matchUpdateTypes": [
-        "minor"
-      ],
-      "matchBaseBranches": [
-        "main"
-      ]
-    },
-    {
-      "enabled": true,   
-      "matchDepTypes": [
-        "dependencies",
-        "peerDependencies"
-      ],
-      "groupName": "Dependencies (patch)",
-      "matchUpdateTypes": [
+        "minor",
         "patch"
       ],
       "matchBaseBranches": [
         "main"
       ]
     },
-    {
-      "enabled": true,   
+    { 
       "matchDepTypes": [
         "dependencies",
         "peerDependencies"
@@ -172,7 +142,6 @@
       ]
     },
     {
-      "enabled": true,   
       "extends": [
         "packages:test"
       ],
@@ -188,7 +157,6 @@
       "automerge": true
     },
     {
-      "enabled": true,   
       "extends": [
         "packages:test"
       ],
@@ -201,7 +169,6 @@
       "groupName": "Test packages "
     },
     {
-      "enabled": true,   
       "extends": [
         "packages:linters"
       ],
@@ -217,7 +184,6 @@
       "automerge": true
     },
     {
-      "enabled": true,   
       "extends": [
         "packages:linters"
       ],
@@ -229,8 +195,7 @@
       ],
       "groupName": "linters"
     },
-    {
-      "enabled": true,   
+    {  
       "extends": [
         "monorepo:material-ui"
       ],
@@ -245,7 +210,6 @@
       "automerge": true
     },
     {
-      "enabled": true,  
       "extends": [
         "monorepo:material-ui"
       ],
@@ -257,8 +221,7 @@
       ],
       "groupName": "material-ui"
     },
-    {
-      "enabled": true,  
+    { 
       "extends": [
         "monorepo:react"
       ],
@@ -272,8 +235,7 @@
       "groupName": "react (non-major)",
       "automerge": true
     },
-    {
-      "enabled": true,  
+    { 
       "extends": [
         "monorepo:react"
       ],
@@ -285,8 +247,7 @@
       ],
       "groupName": "react"
     },
-    {
-      "enabled": true,  
+    {  
       "extends": [
         "monorepo:emotion"
       ],
@@ -300,8 +261,7 @@
       "groupName": "emotion (non-major)",
       "automerge": true
     },
-    {
-      "enabled": true,  
+    { 
       "extends": [
         "monorepo:emotion"
       ],
@@ -313,8 +273,7 @@
       ],
       "groupName": "emotion"
     },
-    {
-      "enabled": true,  
+    { 
       "matchUpdateTypes": [
         "patch",
         "minor"
@@ -328,7 +287,6 @@
       ]
     },
     {
-      "enabled": true, 
       "matchUpdateTypes": [
         "major"
       ],
@@ -341,7 +299,6 @@
       ]
     },
     {
-      "enabled": true, 
       "extends": [
         "monorepo:opentelemetry-js",
         "monorepo:opentelemetry-js-contrib"
@@ -356,8 +313,7 @@
       "groupName": "opentelemetry (non-major)",
       "automerge": false      
     },
-    {
-      "enabled": true, 
+    { 
       "extends": [
         "monorepo:opentelemetry-js",
         "monorepo:opentelemetry-js-contrib"
