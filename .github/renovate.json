@@ -27,14 +27,6 @@
   },
   "packageRules": [  
     {
-      "description": "Enable all release-1.x PRs",
-      "matchBaseBranches": [
-        "/^release-1\\..*/"
-      ],  
-      "enabled": true
-    },
-    {
-      "enabled": false,
       "matchCategories": [
         "python"
       ],
@@ -43,8 +35,7 @@
       "dependencyDashboardApproval": true,
       "description": "require dashboard approval for all python dependencies due to potential conflicts"
     },
-    {
-      "enabled": true,   
+    { 
       "matchCategories": [
         "docker"
       ],
@@ -95,8 +86,7 @@
       "groupName": "DevDependencies ",
       "automerge": true
     }, 
-    {
-      "enabled": true,   
+    {   
       "matchDepTypes": [
         "devDependencies"
       ],
@@ -106,7 +96,6 @@
       "groupName": "DevDependencies "
     },
     {
-      "enabled": true,   
       "matchDepTypes": [
         "dependencies",
         "peerDependencies"
