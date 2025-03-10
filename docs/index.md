@@ -3,8 +3,14 @@
 There are several different methods for running the RHDH app today. We currently have support for running the application locally, using a helm chart to deploy to a cluster, and manifests for deployment using ArgoCD.
 
 ## Links
+<iframe 
+  id="video" 
+  title="a youtube video"
+  width="300"
+  height="200" 
+  src="https://www.youtube.com/watch?v=XgTMH18Q18U">
 
-Youtube [link](https://www.youtube.com/watch?v=XgTMH18Q18U)
+</iframe>
 
 ## Telemetry collection
 
