@@ -8,7 +8,7 @@ There are several different methods for running the RHDH app today. We currently
   title="a youtube video"
   width="300"
   height="200" 
-  src="https://www.youtube.com/watch?v=XgTMH18Q18U">
+  src="https://www.youtube-nocookie.com/embed/XgTMH18Q18U?si=RdekchKHCvV0f1Vl&amp;controls=0">
 
 </iframe>
 
